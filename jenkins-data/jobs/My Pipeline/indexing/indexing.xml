@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.branch.MultiBranchProject_-BranchIndexing plugin="branch-api@2.0.10">
+  <actions/>
+  <result>
+    <name>SUCCESS</name>
+    <ordinal>0</ordinal>
+    <color>BLUE</color>
+    <completeBuild>true</completeBuild>
+  </result>
+  <durations>
+    <long>4085</long>
+  </durations>
+  <timestamp>1499776570903</timestamp>
+  <duration>4085</duration>
+</jenkins.branch.MultiBranchProject_-BranchIndexing>

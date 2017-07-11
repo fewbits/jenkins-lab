@@ -1,0 +1,29 @@
+Started
+[Tue Jul 11 12:36:10 GMT 2017] Starting branch indexing...
+Creating git repository in /var/jenkins_home/caches/git-94a2938116d36f0eabe99551f99d5687
+ > git init /var/jenkins_home/caches/git-94a2938116d36f0eabe99551f99d5687 # timeout=10
+Setting origin to https://github.com/fewbits/jenkins-lab.git
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+Fetching origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git fetch --tags --progress origin +refs/heads/*:refs/remotes/origin/*
+Setting http proxy: 10.130.214.242:3128
+ > git ls-remote --symref https://github.com/fewbits/jenkins-lab.git # timeout=10
+ > git rev-parse --is-inside-work-tree # timeout=10
+Setting origin to https://github.com/fewbits/jenkins-lab.git
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+Fetching & pruning origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git fetch --tags --progress origin +refs/heads/*:refs/remotes/origin/* --prune
+Getting remote branches...
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking branch master
+      ‘Jenkinsfile’ found
+Met criteria
+Scheduled build for branch: master
+Done.
+[Tue Jul 11 12:36:14 GMT 2017] Finished branch indexing. Indexing took 4 sec
+Finished: SUCCESS

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.12.1">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <jenkins.branch.BranchIndexingCause plugin="branch-api@2.0.10"/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.scm.api.SCMRevisionAction plugin="scm-api@2.1.1">
+      <revision class="jenkins.plugins.git.AbstractGitSCMSource$SCMRevisionImpl" plugin="git@3.3.2">
+        <head plugin="scm-api@2.1.1">
+          <name>master</name>
+        </head>
+        <hash>2d5e26a8b383910c0aa54bff47becf5aee52066a</hash>
+      </revision>
+    </jenkins.scm.api.SCMRevisionAction>
+  </actions>
+  <queueId>2</queueId>
+  <timestamp>1499776575011</timestamp>
+  <startTime>1499776575018</startTime>
+  <result>FAILURE</result>
+  <duration>2655</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {
+    agent any
+    stages {
+        stage(&apos;build&apos;) {
+            steps {
+                sh &apos;mvn --version&apos;
+            }
+        }
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>26140648</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>273885438</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>329018667</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>402578958</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>114926326</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>3</iota>
+    <head>1:3</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

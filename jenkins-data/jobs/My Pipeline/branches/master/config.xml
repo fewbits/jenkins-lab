@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.12.1">
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty plugin="workflow-multibranch@2.16">
+      <branch plugin="branch-api@2.0.10">
+        <sourceId>db19a40f-5ff2-485b-9b4d-cc40de0201bd</sourceId>
+        <head plugin="scm-api@2.1.1">
+          <name>master</name>
+        </head>
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.2">
+          <configVersion>2</configVersion>
+          <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+              <name>origin</name>
+              <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+              <url>https://github.com/fewbits/jenkins-lab.git</url>
+            </hudson.plugins.git.UserRemoteConfig>
+          </userRemoteConfigs>
+          <branches class="singleton-list">
+            <hudson.plugins.git.BranchSpec>
+              <name>master</name>
+            </hudson.plugins.git.BranchSpec>
+          </branches>
+          <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+          <submoduleCfg class="empty-list"/>
+          <extensions/>
+        </scm>
+        <properties/>
+        <actions>
+          <jenkins.scm.api.metadata.PrimaryInstanceMetadataAction plugin="scm-api@2.1.1"/>
+        </actions>
+      </branch>
+    </org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.multibranch.SCMBinder" plugin="workflow-multibranch@2.16">
+    <scriptPath>Jenkinsfile</scriptPath>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

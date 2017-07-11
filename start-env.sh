@@ -60,11 +60,30 @@ function jenkinsRestartSafe() {
   echo "Restarting Jenkins..."
   docker-compose exec jenkins bash -c '/usr/bin/java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -auth admin:admin -s http://127.0.0.1:8080/ safe-restart'
 
+  jenkinsWaitUp
+}
+
+function jenkinsWaitUp() {
+
+  echo -n "Waiting until Jenkins becomes fully up..."
+  docker-compose logs --tail=10 | grep "INFO: Jenkins is fully up and running" > /dev/null 2>&1
+  jenkinsLogRC=$?
+  
+  until [ $jenkinsLogRC -eq 0 ]
+  do
+    echo -n "."
+    sleep 2
+    docker-compose logs --tail=10 | grep "INFO: Jenkins is fully up and running" > /dev/null 2>&1
+    jenkinsLogRC=$?
+  done
+  
+  echo " [ok]"
 }
 
 function labConfigure() {
   echo "Configuring the Lab..."
   jenkinsPluginInstall pipeline-multibranch-defaults
+  jenkinsPluginInstall github
   jenkinsRestartSafe
 }
 
@@ -72,6 +91,7 @@ function labStart() {
   echo "Starting the Lab..."
   docker-compose up -d
 
+  jenkinsWaitUp
 }
 
 function serviceStart() {

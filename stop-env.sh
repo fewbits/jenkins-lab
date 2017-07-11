@@ -17,12 +17,17 @@
 # Functions #
 #############
 
+function labStop() {
+  echo "Stopping the Lab..."
+  docker-compose down
+}
+
 ########
 # Stop #
 ########
 
-# Stoping environment
-docker-compose down
+# Stopping the Lab
+labStop
 
 #######
 # End #
