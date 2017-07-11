@@ -1,0 +1,120 @@
+Started by user [8mha:////4PCUZU1yDgJkWoaNDFv3Rk19DCEnDBw7QBs4iqdyaz4yAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+ > git rev-parse --is-inside-work-tree # timeout=10
+Setting origin to https://github.com/fewbits/jenkins-lab.git
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+Fetching origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git fetch --tags --progress origin +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/master
+Seen 1 remote branch
+Obtained Jenkinsfile from 491240dcbbb99febbcf992b25c85948724ce6d32
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on master in /var/jenkins_home/workspace/My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] checkout
+Cloning the remote Git repository
+Cloning repository https://github.com/fewbits/jenkins-lab.git
+ > git init /var/jenkins_home/workspace/My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA # timeout=10
+Fetching upstream changes from https://github.com/fewbits/jenkins-lab.git
+ > git --version # timeout=10
+Setting http proxy: 10.130.214.242:3128
+ > git fetch --tags --progress https://github.com/fewbits/jenkins-lab.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+Fetching upstream changes from https://github.com/fewbits/jenkins-lab.git
+Setting http proxy: 10.130.214.242:3128
+ > git fetch --tags --progress https://github.com/fewbits/jenkins-lab.git +refs/heads/*:refs/remotes/origin/*
+Checking out Revision 491240dcbbb99febbcf992b25c85948724ce6d32 (master)
+Commit message: "Creating a functional Lab"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 491240dcbbb99febbcf992b25c85948724ce6d32
+ > git rev-list a9fab98c6d6fa3c02d85b73c1877f65388769276 # timeout=10
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] withEnv
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Quality)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE SONAR] This code is very good
+[FAKE SONAR] This code is very good
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Build)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE COMPILER] ./configure && make && make install
+[FAKE COMPILER] ./configure && make && make install
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ sleep 2
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE COMPILER] Project compiled with 0 errors
+[FAKE COMPILER] Project compiled with 0 errors
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Test)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry
+[FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy - Development)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE MIDDLEWARE] Project deployed in Development
+[FAKE MIDDLEWARE] Project deployed in Development
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy - QA)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE MIDDLEWARE] Project deployed in QA
+[FAKE MIDDLEWARE] Project deployed in QA
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy - Staging)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ echo [FAKE MIDDLEWARE] Project deployed in Staging
+[FAKE MIDDLEWARE] Project deployed in Staging
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] slackSend
+run slackstepsend, step null:false, desc 2lRiOq9ESXtNzHSrHZfyxg4I:false
+Slack Send Pipeline step configured values from global config - baseUrl: true, teamDomain: true, token: true, channel: false, color: false
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy - Production)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] input
+Are you ready for production?
+[8mha:////4OD1o7HcMBh0AoObJu/mw4OUx5TR77441okQEJbnGpL0AAABFx+LCAAAAAAAAP9djzFOwzAYhf+kAlbEiNgQq12SkIBQJ0ACqUCl9gKu46ROXPvHdmizcAiuAQsSV+AQXICNmYGF0E7wlv/pl7739J4/YcNZODe2JJXQtdSOS4KqKTtHFsbWhTIL4hpEYz1xXqAjUmPjyeh2PLlsUVgldX1jvNh+771+Zd8fIQRD6DVWedgZVuyeUcV0ScfeSl2eLi3szZrcGU240c4oQf6kpIOnl8EjvoUQXsGmErr0s3XcHTxA0OG7//Cz9f2FYa0gBFhiZ7Y8BPseJrQyU3rdHkT9kUTRVYnVZ866QZYeZnQ1icY85ixKUx5NiyyLWBKLJC94xI+PEt7PTihaw4XIL+bo2x8NY/cNOwEAAA==[0mProceed or [8mha:////4HQxQPicpqOr38I1TTbWeYeVxgQIovTqHYZA+9ci3vpyAAABEh+LCAAAAAAAAP9dkDFOwzAUhl9SlRkxIjbEardOSECoEwwgtVCpXMBxndSJsY3t0HbhEFwDFqRegUNwATZmBhZMM8Fb3q9f+v6n/718Qt9ZuNC2QjVXjVCOCWRkWwWFlto2pdRL5FpjtPXIeW4cEsq0Hk1vZreXa8OtFKq51p7vvvc2X/n3RwzRGHqtlR72xjV9oFhSVeGZt0JVZysLB4t27rRCTCunJUd/UrLR8+voybzFEF/BjuSq8osu7h4eIQr4/j/8vNu/MHQTxQArE0TfQ3ToYYJrXeDJ+ogMpsLwcIpvnTsaClk8zPG2Ek5YwijJMkaKMs8JTROezktG2Mlxygb5KaZF+MIPjI1myDQBAAA=[0mAbort
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+This will always run
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] deleteDir
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+This will run only if the state of the Pipeline has changed
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // withEnv
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:////4OrnS+au8n+cDwLVOx6M3chzguybFqAzzbw+a/4+aTTDAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+Rejected by admin
+Finished: ABORTED

@@ -26,25 +26,36 @@ pipeline {
     stage('Deploy - Development') {
       steps {
         sh 'echo "[FAKE MIDDLEWARE] Project deployed in Development"'
+        slackSend channel: '#general',
+                  color: 'good',
+                  message: "Project $PROJECT_NAME deployed in Development."
       }
     }
     stage('Deploy - QA') {
       steps {
+        input 'Proceed to QA?'
         sh 'echo "[FAKE MIDDLEWARE] Project deployed in QA"'
+        slackSend channel: '#general',
+                  color: 'good',
+                  message: "Project $PROJECT_NAME deployed in QA."
       }
     }
     stage('Deploy - Staging') {
       steps {
+        input 'Proceed to Staging?'
         sh 'echo "[FAKE MIDDLEWARE] Project deployed in Staging"'
         slackSend channel: '#general',
                   color: 'good',
-                  message: "There is a new version of $PROJECT_NAME ready for Production."
+                  message: "Project $PROJECT_NAME deployed in Staging."
       }
     }
     stage('Deploy - Production') {
       steps {
-        input 'Are you ready for production?'
+        input 'Proceed to Production?'
         sh 'echo "[FAKE MIDDLEWARE] Project deployed in Production"'
+        slackSend channel: '#general',
+                  color: 'good',
+                  message: "Project $PROJECT_NAME deployed in Production."
       }
     }
   }
@@ -57,10 +68,13 @@ pipeline {
       echo 'This will run only if successful'
       slackSend channel: '#general',
                 color: 'good',
-                message: "The project $PROJECT_NAME was successfully deployed in Production."
+                message: "The pipeline ${currentBuild.fullDisplayName} completed successfully :thumbsup:"
     }
     failure {
       echo 'This will run only if failed'
+      slackSend channel: '#general',
+                color: 'bad',
+                message: "The pipeline ${currentBuild.fullDisplayName} has failed :thumbsdown:"
     }
     unstable {
       echo 'This will run only if unstable'
