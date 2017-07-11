@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<proxy>
+  <name>10.130.214.242</name>
+  <port>3128</port>
+  <userName>eguimaraess</userName>
+  <secretPassword>{AQAAABAAAAAQVHv0Xk+MN1flKmeUmdV2Xw9OOGstFP7NqxHTIiSuYgA=}</secretPassword>
+  <testUrl>https://www.google.com.br</testUrl>
+</proxy>
