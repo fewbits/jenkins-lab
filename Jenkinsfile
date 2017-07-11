@@ -6,10 +6,26 @@ pipeline {
   }
 
   stages {
+    stage('Quality') {
+      steps {
+        sh 'echo "[FAKE SONAR] This code is very good"'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'echo "[FAKE COMPILER] ./configure && make && make install"'
+        sh 'sleep 2'
+        sh 'echo "[FAKE COMPILER] Project compiled with 0 errors"'
+      }
+    }
     stage('Test') {
       steps {
-        sh '/usr/bin/java -version'
-        sh 'echo Project Name is: $PROJECT_NAME'
+        sh 'echo "[FAKE TESTER] says: This is the best project I've seen in my entire life, and it never breaks, and I think I gonna cry"'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'echo "[FAKE MIDDLEWARE] Project deployed in all the environment across the world - true story ;)"'
       }
     }
   }
@@ -17,12 +33,12 @@ pipeline {
     always {
       echo 'This will always run'
       deleteDir()
-      slackSend channel: '#general',
-                color: 'good',
-                message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
     }
     success {
       echo 'This will run only if successful'
+      slackSend channel: '#general',
+                color: 'good',
+                message: "The project $PROJECT_NAME was succesfully executed."
     }
     failure {
       echo 'This will run only if failed'

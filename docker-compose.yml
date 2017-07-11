@@ -10,6 +10,7 @@ services:
     - ./jenkins-data/jobs:/var/jenkins_home/jobs
     - ./jenkins-data/proxy.xml:/var/jenkins_home/proxy.xml
     - ./jenkins-data/users:/var/jenkins_home/users
+    - ./jenkins-data/jenkins.plugins.slack.SlackNotifier.xml:/var/jenkins_home/jenkins.plugins.slack.SlackNotifier.xml
     environment:
     - http_proxy=$http_proxy
     - https_proxy=$https_proxy

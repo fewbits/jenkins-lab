@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.slack.SlackNotifier_-DescriptorImpl plugin="slack@2.2">
+  <baseUrl></baseUrl>
+  <teamDomain>indra-lab-br</teamDomain>
+  <token>2lRiOq9ESXtNzHSrHZfyxg4I</token>
+  <tokenCredentialId></tokenCredentialId>
+  <botUser>false</botUser>
+  <room></room>
+</jenkins.plugins.slack.SlackNotifier_-DescriptorImpl>

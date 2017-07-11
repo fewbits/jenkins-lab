@@ -1,0 +1,4 @@
+run slackstepsend, step null:false, desc null:false
+Slack Send Pipeline step configured values from global config - baseUrl: true, teamDomain: true, token: true, channel: false, color: false
+ERROR: Slack notification failed. See Jenkins logs for details.
+[8mha:////4KmnfCIZYcixmAVnJixDfo+cO3KKCu5wrXbn15gp8uUfAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0m

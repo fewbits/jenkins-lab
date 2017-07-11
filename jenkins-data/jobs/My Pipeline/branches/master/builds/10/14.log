@@ -1,0 +1,5 @@
+[My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA] Running shell script
++ /usr/bin/java -version
+openjdk version "1.8.0_121"
+OpenJDK Runtime Environment (IcedTea 3.3.0) (Alpine 8.121.13-r0)
+OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
