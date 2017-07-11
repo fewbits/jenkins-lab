@@ -9,13 +9,17 @@ pipeline {
     stage('Test') {
       steps {
         sh '/usr/bin/java -version'
-        sh 'echo $PROJECT_NAME'
+        sh 'echo Project Name is: $PROJECT_NAME'
       }
     }
   }
   post {
     always {
       echo 'This will always run'
+      deleteDir()
+      slackSend channel: '#ops-room',
+                color: 'good',
+                message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
     }
     success {
       echo 'This will run only if successful'

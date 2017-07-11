@@ -84,6 +84,7 @@ function labConfigure() {
   echo "Configuring the Lab..."
   jenkinsPluginInstall github
   jenkinsPluginInstall pipeline-multibranch-defaults
+  jenkinsPluginInstall slack
   jenkinsPluginInstall workflow-aggregator
   jenkinsRestartSafe
 }
