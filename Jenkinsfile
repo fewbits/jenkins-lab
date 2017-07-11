@@ -17,7 +17,7 @@ pipeline {
     always {
       echo 'This will always run'
       deleteDir()
-      slackSend channel: '#ops-room',
+      slackSend channel: '#general',
                 color: 'good',
                 message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
     }
