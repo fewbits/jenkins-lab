@@ -21,14 +21,14 @@
 # Functions #
 #############
 
-function serviceStart() {
-  serviceName=$1 # Name of Service to be started
+function checkProxy() {
+  echo -n "Checking state of system proxy... "
   
-  echo "Trying to start service '${serviceName}'... "
-  sudo systemctl start ${serviceName} > /dev/null 2>&1  
-  echo "We need to check service '${serviceName}' again"
-  checkService ${serviceName}
-
+  if [ ${http_proxy} ]; then
+    echo "[enabled]"
+  else
+    echo "[disabled]"
+  fi
 }
 
 function checkService() {
@@ -47,32 +47,57 @@ function checkService() {
 
 }
 
+function jenkinsPluginInstall() {
+  pluginName=$1 # Name of Plugin to be installed
+  
+  echo "Installing Jenkins Plugin '${pluginName}'..."
+  docker-compose exec jenkins bash -c "/usr/bin/java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -auth admin:admin -s http://127.0.0.1:8080/ install-plugin ${pluginName}"
+
+}
+
+function jenkinsRestartSafe() {
+
+  echo "Restarting Jenkins..."
+  docker-compose exec jenkins bash -c '/usr/bin/java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -auth admin:admin -s http://127.0.0.1:8080/ safe-restart'
+
+}
+
+function labConfigure() {
+  echo "Configuring the Lab..."
+  jenkinsPluginInstall pipeline-multibranch-defaults
+  jenkinsRestartSafe
+}
+
+function labStart() {
+  echo "Starting the Lab..."
+  docker-compose up -d
+
+}
+
+function serviceStart() {
+  serviceName=$1 # Name of Service to be started
+  
+  echo "Trying to start service '${serviceName}'... "
+  sudo systemctl start ${serviceName} > /dev/null 2>&1  
+  echo "We need to check service '${serviceName}' again"
+  checkService ${serviceName}
+
+}
+
 #########
 # Start #
 #########
 
-# Validating: Services
+# Validations
+checkProxy
 checkService "docker.service"
 
-# Starting environment
-docker-compose up -d
+# Starting the Lab
+labStart
+
+# Configuring the Lab
+labConfigure
 
 #######
 # End #
 #######
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

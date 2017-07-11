@@ -5,7 +5,16 @@ services:
     ports:
     - "8081:8080"
     volumes:
-    - "./jenkins-data:/var/jenkins_home"
+    - ./jenkins-data/config.xml:/var/jenkins_home/config.xml
+#    - ./jenkins-data/identity.key.enc:/var/jenkins_home/identity.key.env
+    - ./jenkins-data/jenkins.install.InstallUtil.lastExecVersion:/var/jenkins_home/jenkins.install.InstallUtil.lastExecVersion
+#    - ./jenkins-data/jenkins.install.UpgradeWizard.state:/var/jenkins_home/jenkins.install.UpgradeWizard.state
+    - ./jenkins-data/jobs:/var/jenkins_home/jobs
+    - ./jenkins-data/proxy.xml:/var/jenkins_home/proxy.xml
+#    - ./jenkins-data/secret.key:/var/jenkins_home/secret.key
+#    - ./jenkins-data/secret.key.not-so-secret:/var/jenkins_home/secret.key.not-so-secret
+#    - ./jenkins-data/secrets:/var/jenkins_home/secrets
+    - ./jenkins-data/users:/var/jenkins_home/users
     environment:
     - http_proxy=$http_proxy
     - https_proxy=$https_proxy
