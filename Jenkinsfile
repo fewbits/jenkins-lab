@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'echo "[FAKE TESTER] says: This is the best project I've seen in my entire life, and it never breaks, and I think I gonna cry"'
+        sh 'echo "[FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry"'
       }
     }
     stage('Deploy') {

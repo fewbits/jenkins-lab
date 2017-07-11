@@ -3,5 +3,5 @@
   <head plugin="scm-api@2.1.1">
     <name>master</name>
   </head>
-  <hash>dc448f0fe0ed18159aa42b2d4ccecdcf6b1cb28e</hash>
+  <hash>bfd75aa6bcb63969db1d1700ab83d4e25ab922b5</hash>
 </jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl>
