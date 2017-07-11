@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl plugin="git@3.3.2">
+  <head plugin="scm-api@2.1.1">
+    <name>master</name>
+  </head>
+  <hash>78878251e309c9cd1bb2d1576331b98e44c30725</hash>
+</jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl>
