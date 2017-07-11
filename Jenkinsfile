@@ -23,9 +23,25 @@ pipeline {
         sh 'echo "[FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry"'
       }
     }
-    stage('Deploy') {
+    stage('Deploy - Development') {
       steps {
-        sh 'echo "[FAKE MIDDLEWARE] Project deployed in all the environment across the world - true story ;)"'
+        sh 'echo "[FAKE MIDDLEWARE] Project deployed in Development"'
+      }
+    }
+    stage('Deploy - QA') {
+      steps {
+        sh 'echo "[FAKE MIDDLEWARE] Project deployed in QA"'
+      }
+    }
+    stage('Deploy - Staging') {
+      steps {
+        sh 'echo "[FAKE MIDDLEWARE] Project deployed in Staging"'
+      }
+    }
+    stage('Deploy - Production') {
+      steps {
+        input 'Are you ready for production?'
+        sh 'echo "[FAKE MIDDLEWARE] Project deployed in Production"'
       }
     }
   }
