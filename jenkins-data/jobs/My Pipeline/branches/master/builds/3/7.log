@@ -1,0 +1,18 @@
+Cloning the remote Git repository
+Cloning repository https://github.com/fewbits/jenkins-lab.git
+ > git init /var/jenkins_home/workspace/My_Pipeline_master-KX7XBL63CQEDQTNZKBOYFV6X2NHL6Y56ZLRMSX6DZ3WJX6IDTRWA # timeout=10
+Fetching upstream changes from https://github.com/fewbits/jenkins-lab.git
+ > git --version # timeout=10
+Setting http proxy: 10.130.214.242:3128
+ > git fetch --tags --progress https://github.com/fewbits/jenkins-lab.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
+Fetching upstream changes from https://github.com/fewbits/jenkins-lab.git
+Setting http proxy: 10.130.214.242:3128
+ > git fetch --tags --progress https://github.com/fewbits/jenkins-lab.git +refs/heads/*:refs/remotes/origin/*
+Checking out Revision ad39010ea0bed62b86cca962e057d27be7bf846c (master)
+Commit message: "Creating a functional Lab"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ad39010ea0bed62b86cca962e057d27be7bf846c
+First time build. Skipping changelog.

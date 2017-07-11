@@ -1,7 +1,6 @@
-Started
-[Tue Jul 11 12:36:10 GMT 2017] Starting branch indexing...
-Creating git repository in /var/jenkins_home/caches/git-94a2938116d36f0eabe99551f99d5687
- > git init /var/jenkins_home/caches/git-94a2938116d36f0eabe99551f99d5687 # timeout=10
+Started by user [8mha:////4AsQgHplP1aEzb2FiBte8F5hCSX3q2QoP61ciFZg6TuQAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[Tue Jul 11 12:43:21 GMT 2017] Starting branch indexing...
+ > git rev-parse --is-inside-work-tree # timeout=10
 Setting origin to https://github.com/fewbits/jenkins-lab.git
  > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
 Fetching origin...
@@ -23,7 +22,7 @@ Seen 1 remote branch
 Checking branch master
       ‘Jenkinsfile’ found
 Met criteria
-Scheduled build for branch: master
+No changes detected: master (still at ad39010ea0bed62b86cca962e057d27be7bf846c)
 Done.
-[Tue Jul 11 12:36:14 GMT 2017] Finished branch indexing. Indexing took 4 sec
+[Tue Jul 11 12:43:23 GMT 2017] Finished branch indexing. Indexing took 2 sec
 Finished: SUCCESS

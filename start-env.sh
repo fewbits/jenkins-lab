@@ -82,8 +82,9 @@ function jenkinsWaitUp() {
 
 function labConfigure() {
   echo "Configuring the Lab..."
-  jenkinsPluginInstall pipeline-multibranch-defaults
   jenkinsPluginInstall github
+  jenkinsPluginInstall pipeline-multibranch-defaults
+  jenkinsPluginInstall workflow-aggregator
   jenkinsRestartSafe
 }
 
