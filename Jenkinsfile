@@ -36,6 +36,9 @@ pipeline {
     stage('Deploy - Staging') {
       steps {
         sh 'echo "[FAKE MIDDLEWARE] Project deployed in Staging"'
+        slackSend channel: '#general',
+                  color: 'good',
+                  message: "There is a new version of $PROJECT_NAME ready for Production."
       }
     }
     stage('Deploy - Production') {
@@ -54,7 +57,7 @@ pipeline {
       echo 'This will run only if successful'
       slackSend channel: '#general',
                 color: 'good',
-                message: "The project $PROJECT_NAME was succesfully executed."
+                message: "The project $PROJECT_NAME was successfully deployed in Production."
     }
     failure {
       echo 'This will run only if failed'
