@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.12.1">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2.10">
+      <queuingDurationMillis>125</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <io.jenkins.blueocean.service.embedded.BlueOceanUrlAction plugin="blueocean-rest-impl@1.1.4">
+      <blueOceanUrlObject class="io.jenkins.blueocean.service.embedded.BlueOceanUrlObjectImpl">
+        <mappedUrl>blue/organizations/jenkins/PipelineAsCode/detail/master/19</mappedUrl>
+      </blueOceanUrlObject>
+    </io.jenkins.blueocean.service.embedded.BlueOceanUrlAction>
+    <jenkins.scm.api.SCMRevisionAction plugin="scm-api@2.1.1">
+      <revision class="jenkins.plugins.git.AbstractGitSCMSource$SCMRevisionImpl" plugin="git@3.3.2">
+        <head plugin="scm-api@2.1.1">
+          <name>master</name>
+        </head>
+        <hash>fcc548511b93a36d1ee7e2f4606aba861b56c124</hash>
+      </revision>
+    </jenkins.scm.api.SCMRevisionAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.8">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.1.8">
+      <stages plugin="pipeline-model-api@1.1.8">
+        <stages>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Quality</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE SONAR] This code is very good&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Build</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE COMPILER] ./configure &amp;&amp; make &amp;&amp; make install&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">sleep 2</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE COMPILER] Project compiled with 0 errors&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Test</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Deploy - Development</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE MIDDLEWARE] Project deployed in Development&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>slackSend</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>channel</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">#general</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>color</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">good</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                            <value class="string">&quot;Project $PROJECT_NAME deployed in Development.&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Deploy - QA</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>input</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">Proceed to QA?</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE MIDDLEWARE] Project deployed in QA&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>slackSend</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>channel</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">#general</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>color</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">good</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                            <value class="string">&quot;Project $PROJECT_NAME deployed in QA.&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Deploy - Staging</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>input</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">Proceed to Staging?</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE MIDDLEWARE] Project deployed in Staging&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>slackSend</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>channel</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">#general</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>color</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">good</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                            <value class="string">&quot;Project $PROJECT_NAME deployed in Staging.&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            <name>Deploy - Production</name>
+            <branches>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                <name>default</name>
+                <steps>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>input</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">Proceed to Production?</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>sh</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>script</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">echo &quot;[FAKE MIDDLEWARE] Project deployed in Production&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <name>slackSend</name>
+                    <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                      <arguments class="linked-hash-map">
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>channel</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">#general</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>color</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                            <value class="string">good</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-1>
+                        </entry>
+                        <entry>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <key>message</key>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                            <value class="string">&quot;Project $PROJECT_NAME deployed in Production.&quot;</value>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-2>
+                        </entry>
+                      </arguments>
+                    </args>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                </steps>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+            </branches>
+          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+        </stages>
+      </stages>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@3.3.2">
+      <buildsByBranchName>
+        <entry>
+          <string>master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.4.6">
+              <sha1>fcc548511b93a36d1ee7e2f4606aba861b56c124</sha1>
+              <branches class="singleton-set">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>19</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/fewbits/jenkins-lab.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.3.2">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/PipelineAsCode_master-EHXEK4CHO2IOU4B7AVGOZ6XGLZE4QOIWFZ562YSIFIHTHDEYJH3Q</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.6">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/fewbits/jenkins-lab.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.36.1">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputAction plugin="pipeline-input-step@2.7">
+      <ids class="java.util.concurrent.CopyOnWriteArrayList"/>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.7">
+      <userId>admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.7">
+      <userId>admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.7">
+      <userId>admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+  </actions>
+  <queueId>1</queueId>
+  <timestamp>1499795390475</timestamp>
+  <startTime>1499795390545</startTime>
+  <result>SUCCESS</result>
+  <duration>81119</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>pipeline {
+  agent any
+
+  triggers {
+    pollSCM(&apos;*/5 * * * *&apos;)
+  }
+
+  environment {
+    PROJECT_NAME = &apos;jenkins-lab&apos;
+  }
+
+  stages {
+    stage(&apos;Quality&apos;) {
+      steps {
+        sh &apos;echo &quot;[FAKE SONAR] This code is very good&quot;&apos;
+      }
+    }
+    stage(&apos;Build&apos;) {
+      steps {
+        sh &apos;echo &quot;[FAKE COMPILER] ./configure &amp;&amp; make &amp;&amp; make install&quot;&apos;
+        sh &apos;sleep 2&apos;
+        sh &apos;echo &quot;[FAKE COMPILER] Project compiled with 0 errors&quot;&apos;
+      }
+    }
+    stage(&apos;Test&apos;) {
+      steps {
+        sh &apos;echo &quot;[FAKE TESTER] says: This is the best project I have ever seen in my entire life and it never breaks and I think I gonna cry&quot;&apos;
+      }
+    }
+    stage(&apos;Deploy - Development&apos;) {
+      steps {
+        sh &apos;echo &quot;[FAKE MIDDLEWARE] Project deployed in Development&quot;&apos;
+        slackSend channel: &apos;#general&apos;,
+                  color: &apos;good&apos;,
+                  message: &quot;Project $PROJECT_NAME deployed in Development.&quot;
+      }
+    }
+    stage(&apos;Deploy - QA&apos;) {
+      steps {
+        input &apos;Proceed to QA?&apos;
+        sh &apos;echo &quot;[FAKE MIDDLEWARE] Project deployed in QA&quot;&apos;
+        slackSend channel: &apos;#general&apos;,
+                  color: &apos;good&apos;,
+                  message: &quot;Project $PROJECT_NAME deployed in QA.&quot;
+      }
+    }
+    stage(&apos;Deploy - Staging&apos;) {
+      steps {
+        input &apos;Proceed to Staging?&apos;
+        sh &apos;echo &quot;[FAKE MIDDLEWARE] Project deployed in Staging&quot;&apos;
+        slackSend channel: &apos;#general&apos;,
+                  color: &apos;good&apos;,
+                  message: &quot;Project $PROJECT_NAME deployed in Staging.&quot;
+      }
+    }
+    stage(&apos;Deploy - Production&apos;) {
+      steps {
+        input &apos;Proceed to Production?&apos;
+        sh &apos;echo &quot;[FAKE MIDDLEWARE] Project deployed in Production&quot;&apos;
+        slackSend channel: &apos;#general&apos;,
+                  color: &apos;good&apos;,
+                  message: &quot;Project $PROJECT_NAME deployed in Production.&quot;
+      }
+    }
+  }
+  post {
+    always {
+      echo &apos;This will always run&apos;
+      deleteDir()
+    }
+    success {
+      echo &apos;This will run only if successful&apos;
+      slackSend channel: &apos;#general&apos;,
+                color: &apos;good&apos;,
+                message: &quot;The pipeline ${currentBuild.fullDisplayName} completed successfully :thumbsup:&quot;
+    }
+    failure {
+      echo &apos;This will run only if failed&apos;
+      slackSend channel: &apos;#general&apos;,
+                color: &apos;bad&apos;,
+                message: &quot;The pipeline ${currentBuild.fullDisplayName} has failed :thumbsdown:&quot;
+    }
+    unstable {
+      echo &apos;This will run only if unstable&apos;
+    }
+    changed {
+      echo &apos;This will run only if the state of the Pipeline has changed&apos;
+    }
+  }
+}
+</script>
+    <loadedScripts class="map">
+      <entry>
+        <string>Script1</string>
+        <string>&quot;PROJECT_NAME=jenkins-lab&quot;</string>
+      </entry>
+    </loadedScripts>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>3490279975</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>12979043341</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>20257649318</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>4100360624</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>1739338382</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>68</iota>
+    <head>1:68</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.2">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <name>origin</name>
+            <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+            <url>https://github.com/fewbits/jenkins-lab.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.BuildChooserSetting>
+            <buildChooser class="jenkins.plugins.git.AbstractGitSCMSource$SpecificRevisionBuildChooser">
+              <revision reference="../../../../../../../actions/hudson.plugins.git.util.BuildData/buildsByBranchName/entry/hudson.plugins.git.util.Build/marked"/>
+            </buildChooser>
+          </hudson.plugins.git.extensions.impl.BuildChooserSetting>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/jenkins_home/workspace/PipelineAsCode_master-EHXEK4CHO2IOU4B7AVGOZ6XGLZE4QOIWFZ562YSIFIHTHDEYJH3Q</workspace>
+      <changelogFile>/var/jenkins_home/jobs/PipelineAsCode/branches/master/builds/19/changelog0.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

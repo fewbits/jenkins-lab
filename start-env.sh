@@ -83,6 +83,7 @@ function jenkinsWaitUp() {
 
 function labConfigure() {
   echo "Configuring the Lab..."
+  jenkinsPluginInstall blueocean
   jenkinsPluginInstall github
   jenkinsPluginInstall pipeline-multibranch-defaults
   jenkinsPluginInstall slack
@@ -120,6 +121,9 @@ labStart
 
 # Configuring the Lab
 labConfigure
+
+# Done!
+echo "Click here => http://127.0.0.1:8081/blue"
 
 #######
 # End #

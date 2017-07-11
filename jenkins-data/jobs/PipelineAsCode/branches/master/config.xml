@@ -6,9 +6,22 @@
       <triggers/>
       <parameters/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+    <io.jenkins.blueocean.service.embedded.BlueOceanUrlAction plugin="blueocean-rest-impl@1.1.4">
+      <blueOceanUrlObject class="io.jenkins.blueocean.service.embedded.BlueOceanUrlObjectImpl">
+        <mappedUrl>blue/organizations/jenkins/PipelineAsCode/branches</mappedUrl>
+      </blueOceanUrlObject>
+    </io.jenkins.blueocean.service.embedded.BlueOceanUrlAction>
   </actions>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers>
+        <hudson.triggers.SCMTrigger>
+          <spec>*/5 * * * *</spec>
+          <ignorePostCommitHooks>false</ignorePostCommitHooks>
+        </hudson.triggers.SCMTrigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
     <org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty plugin="workflow-multibranch@2.16">
       <branch plugin="branch-api@2.0.10">
         <sourceId>db19a40f-5ff2-485b-9b4d-cc40de0201bd</sourceId>
