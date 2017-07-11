@@ -1,9 +1,15 @@
 pipeline {
   agent any
+
+  environment {
+    PROJECT_NAME = 'jenkins-lab'
+  }
+
   stages {
     stage('Test') {
       steps {
         sh '/usr/bin/java -version'
+        sh 'echo $PROJECT_NAME'
       }
     }
   }
