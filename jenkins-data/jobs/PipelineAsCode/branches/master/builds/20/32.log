@@ -1,0 +1,2 @@
+run slackstepsend, step null:false, desc 2lRiOq9ESXtNzHSrHZfyxg4I:false
+Slack Send Pipeline step configured values from global config - baseUrl: true, teamDomain: true, token: true, channel: false, color: false

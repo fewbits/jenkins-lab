@@ -1,5 +1,5 @@
-Started by user [8mha:////4PCUZU1yDgJkWoaNDFv3Rk19DCEnDBw7QBs4iqdyaz4yAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-[Tue Jul 11 16:27:23 GMT 2017] Starting branch indexing...
+Started by user [8mha:////4ADWvw7Z30LjSDk0cFxbG8nOVngb6DKhW3InVr5O3XLlAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[Wed Jul 12 18:17:17 GMT 2017] Starting branch indexing...
  > git rev-parse --is-inside-work-tree # timeout=10
 Setting origin to https://github.com/fewbits/jenkins-lab.git
  > git config remote.origin.url https://github.com/fewbits/jenkins-lab.git # timeout=10
@@ -22,7 +22,7 @@ Seen 1 remote branch
 Checking branch master
       ‘Jenkinsfile’ found
 Met criteria
-No changes detected: master (still at 78878251e309c9cd1bb2d1576331b98e44c30725)
+No changes detected: master (still at 09644caab0711ed5471206e05554e98489eb2121)
 Done.
-[Tue Jul 11 16:27:26 GMT 2017] Finished branch indexing. Indexing took 2.6 sec
+[Wed Jul 12 18:17:19 GMT 2017] Finished branch indexing. Indexing took 2.1 sec
 Finished: SUCCESS

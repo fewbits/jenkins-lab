@@ -1,0 +1,9 @@
+Started on Jul 11, 2017 6:20:00 PM
+Using strategy: Specific revision
+[poll] Last Built Revision: Revision fcc548511b93a36d1ee7e2f4606aba861b56c124 (master)
+Setting http proxy: 10.130.214.242:3128
+ > git ls-remote -h https://github.com/fewbits/jenkins-lab.git # timeout=10
+Found 1 remote heads on https://github.com/fewbits/jenkins-lab.git
+[poll] Latest remote head revision on refs/heads/master is: 09644caab0711ed5471206e05554e98489eb2121
+Done. Took 1.8 sec
+Changes found

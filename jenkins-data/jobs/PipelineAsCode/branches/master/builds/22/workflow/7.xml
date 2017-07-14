@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag plugin="workflow-support@2.14">
+  <node class="org.jenkinsci.plugins.workflow.cps.nodes.StepAtomNode" plugin="workflow-cps@2.36.1">
+    <parentIds>
+      <string>6</string>
+    </parentIds>
+    <id>7</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.scm.GenericSCMStep</descriptorId>
+  </node>
+  <actions>
+    <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+      <charset>UTF-8</charset>
+    </org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+    <org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl plugin="workflow-cps@2.36.1">
+      <arguments class="linked-hash-map">
+        <entry>
+          <string>scm</string>
+          <hudson.plugins.git.GitSCM plugin="git@3.3.2">
+            <configVersion>2</configVersion>
+            <userRemoteConfigs>
+              <hudson.plugins.git.UserRemoteConfig>
+                <name>origin</name>
+                <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+                <url>https://github.com/fewbits/jenkins-lab.git</url>
+              </hudson.plugins.git.UserRemoteConfig>
+            </userRemoteConfigs>
+            <branches class="singleton-list">
+              <hudson.plugins.git.BranchSpec>
+                <name>master</name>
+              </hudson.plugins.git.BranchSpec>
+            </branches>
+            <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+            <submoduleCfg class="empty-list"/>
+            <extensions>
+              <hudson.plugins.git.extensions.impl.BuildChooserSetting>
+                <buildChooser class="jenkins.plugins.git.AbstractGitSCMSource$SpecificRevisionBuildChooser">
+                  <revision plugin="git-client@2.4.6">
+                    <sha1 serialization="custom">
+                      <unserializable-parents>
+                        <w1>157568170</w1>
+                        <w2>-1334763819</w2>
+                        <w3>1192363744</w3>
+                        <w4>1431628164</w4>
+                        <w5>-1981079263</w5>
+                      </unserializable-parents>
+                      <org.eclipse.jgit.lib.ObjectId>
+                        <int>157568170</int>
+                        <int>-1334763819</int>
+                        <int>1192363744</int>
+                        <int>1431628164</int>
+                        <int>-1981079263</int>
+                      </org.eclipse.jgit.lib.ObjectId>
+                    </sha1>
+                    <branches class="singleton-set">
+                      <hudson.plugins.git.Branch>
+                        <sha1 reference="../../../sha1"/>
+                        <name>master</name>
+                      </hudson.plugins.git.Branch>
+                    </branches>
+                  </revision>
+                </buildChooser>
+              </hudson.plugins.git.extensions.impl.BuildChooserSetting>
+            </extensions>
+          </hudson.plugins.git.GitSCM>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl>
+    <org.jenkinsci.plugins.workflow.actions.TimingAction plugin="workflow-api@2.18">
+      <startTime>1499882389371</startTime>
+    </org.jenkinsci.plugins.workflow.actions.TimingAction>
+  </actions>
+</org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag>

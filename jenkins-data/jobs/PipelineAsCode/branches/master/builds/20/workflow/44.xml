@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag plugin="workflow-support@2.14">
+  <node class="org.jenkinsci.plugins.workflow.cps.nodes.StepAtomNode" plugin="workflow-cps@2.36.1">
+    <parentIds>
+      <string>43</string>
+    </parentIds>
+    <id>44</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.support.steps.input.InputStep</descriptorId>
+  </node>
+  <actions>
+    <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+      <charset>UTF-8</charset>
+    </org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+    <org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl plugin="workflow-cps@2.36.1">
+      <arguments class="linked-hash-map">
+        <entry>
+          <string>message</string>
+          <string>Proceed to Staging?</string>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl>
+    <org.jenkinsci.plugins.workflow.support.actions.PauseAction>
+      <cause>Input</cause>
+      <startTime>1499797319266</startTime>
+      <endTime>1499797332504</endTime>
+    </org.jenkinsci.plugins.workflow.support.actions.PauseAction>
+    <org.jenkinsci.plugins.workflow.actions.TimingAction plugin="workflow-api@2.18">
+      <startTime>1499797319291</startTime>
+    </org.jenkinsci.plugins.workflow.actions.TimingAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputSubmittedAction plugin="pipeline-input-step@2.7">
+      <parameters class="linked-hash-map"/>
+      <approver>admin</approver>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputSubmittedAction>
+  </actions>
+</org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag>
